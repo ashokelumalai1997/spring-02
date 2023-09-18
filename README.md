@@ -49,3 +49,11 @@ Use @Qualifier("") in declaration of Beans and mentionn Qualifier in auto wiring
 ## Handle object creation with Spring
 @Component
 @ComponentScan("package")
+
+## Conflicts in Component
+@Primary - A bean should be given preference when multiple candidates are qualified
+@Qualifier -  A specific bean should be auto-wired (name of the bean can be used as qualifier)
+ALWAYS think from the perspective of the class using the bean
+1. Just @AutoWired : Give me (preferred) algorithm
+2. @Autowired + @Qualifier : I only want to use specific algorithm
+   (REMEMBER)@Qualifier has higher priority than @Primary
