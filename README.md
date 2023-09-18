@@ -44,4 +44,8 @@ Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
 @Primary annotation to mention which one to use
 Use @Qualifier("") in declaration of Beans and mentionn Qualifier in auto wiring parameter
 
-# spring-02
+# Spring-02
+
+## Handle object creation with Spring
+@Component
+@ComponentScan("package")
