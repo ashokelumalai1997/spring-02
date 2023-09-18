@@ -44,5 +44,20 @@ Recommended for
 
 
 
-
+# Why do we have a lot of Dependencies
+- In Game runner Hello World App, we have very few classes
+- But real world apps are much commplex
+  - Multiple layers(Web, Business, Data etc)
+  - Each layer is dependent on the layer below it
+    - EXample : Business layer class talks to data layer class
+      - Data layer class is a dependency of Buss layer class
+    - There are thousands of such dependecies in every app
+- With Spring Framework,
+  - Instead of focusing on objects, their deps and wiring 
+    - You can focus on the business logic of your application
+  - Spring framwork manages the lifecycle of Objects
+    - Mark components using annotations: @Component ( and others.. )
+    - Mark dependencies using @Autowired
+    - Allow Spring framework to do its magic
+- Ex: Business calculation service 
 
